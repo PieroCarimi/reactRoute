@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "./LoginButton";
 
 function Home(){

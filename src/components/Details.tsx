@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, Route, useParams } from "react-router-dom";
-import RouteNotFound from "./RouteNotFound";
+import { NavLink, useParams } from "react-router-dom";
 import Redirect from "./Redirect";
 
 function Details() {
@@ -45,10 +44,10 @@ function Details() {
     if (!postComments){
         return <div>Loading...</div>;
     }
-    console.log(idPost)
+
 
     if (Object.keys(postDetail).length !== 0){
-        console.log(postDetail)
+        
         return (
             <div>
                 <NavLink to="/">Torna alla home</NavLink>
@@ -65,7 +64,6 @@ function Details() {
             </div>
         )
     }else{
-        console.log("ciao")
         return(
             <Redirect/>
         )
