@@ -20,19 +20,17 @@ import { ProtectedRoute } from './components/ProtectedRoute';
 import { GuestRoute } from './components/GuestRoute';
 
 function App() {
-  const{isLogged}= useContext(AppContext)
-  console.log(isLogged)
   
   return(
   
     <BrowserRouter>
       <Routes>
 
-        <Route element={<GuestRoute isLogged={isLogged} />}>
+        <Route element={<GuestRoute />}>
           <Route path="/login" element={<Login />} />
         </Route>
 
-        <Route element={<ProtectedRoute isLogged={isLogged} />}>
+        <Route element={<ProtectedRoute />}>
           <Route path="/" element={<Home />} />
         </Route>
 

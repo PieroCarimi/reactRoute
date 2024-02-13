@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import { utilitySetIsLogged } from "./utilities/utilities";
 
 type ContextProvider = {
     children: React.ReactNode,
@@ -6,17 +7,25 @@ type ContextProvider = {
 
 interface TContext{
     isLogged : boolean,
-    setIsLogged : (logged : boolean) => void
+    setIsLogged : (logged : boolean) => void,
+    handleLoginClick : () => void,
 }
 
 export const AppContext = createContext<TContext>({
     isLogged : false,
-    setIsLogged : () => {}
+    setIsLogged : () => {},
+    handleLoginClick : () => {}
 });
 
 export const AppProvider = ({ children }: ContextProvider) => {
     const [isLogged, setIsLogged] = useState<boolean>(false);
     
+    const handleLoginClick = () => {
+        const newIsLogged = !isLogged;
+        utilitySetIsLogged(newIsLogged);
+        setIsLogged(newIsLogged);
+    };
+
     useEffect(() => {
         const localStorageIsLogged = localStorage.getItem("isLogged");
         if (localStorageIsLogged !== null) {
@@ -25,7 +34,7 @@ export const AppProvider = ({ children }: ContextProvider) => {
     }, []);
 
     return (
-        <AppContext.Provider value={{ isLogged, setIsLogged }}>
+        <AppContext.Provider value={{ isLogged, setIsLogged, handleLoginClick }}>
             {children}
         </AppContext.Provider>
     );
