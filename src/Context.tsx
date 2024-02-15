@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { utilitySetIsLogged } from "./utilities/utilities";
+import { utilityGetIsLogged, utilitySetIsLogged } from "./utilities/utilities";
 
 type ContextProvider = {
     children: React.ReactNode,
@@ -18,7 +18,7 @@ export const AppContext = createContext<TContext>({
 });
 
 export const AppProvider = ({ children }: ContextProvider) => {
-    const [isLogged, setIsLogged] = useState<boolean>(false);
+    const [isLogged, setIsLogged] = useState<boolean>(utilityGetIsLogged());
     
     const handleLoginClick = () => {
         const newIsLogged = !isLogged;

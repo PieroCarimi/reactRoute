@@ -1,18 +1,12 @@
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import {
   BrowserRouter,
-  Link,
-  NavLink,
-  Navigate,
-  Outlet,
   Route,
   Routes,
-  useParams,
   } from "react-router-dom";
 import './App.css';
 import {Login} from './components/Login'
 import Home from './components/Home';
-import { AppContext } from './Context';
 import Details from './components/Details';
 import Redirect from './components/Redirect';
 import RouteNotFound from './components/RouteNotFound';

@@ -1,7 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import React from "react";
+import { NavLink } from "react-router-dom";
 import Redirect from "./Redirect";
 import { usePostDetails } from "../hooks/usePostDetails";
+import styled from "styled-components";
+
+const ContainerDiv = styled.div({
+    marginLeft: '100px',
+    marginRight: '100px'
+})
 
 function Details() {
     const {postDetail, postComments} = usePostDetails()
@@ -18,7 +24,7 @@ function Details() {
     if (Object.keys(postDetail).length !== 0){
         
         return (
-            <div>
+            <ContainerDiv>
                 <NavLink to="/">Torna alla home</NavLink>
                 <h1>Dettaglio post {postDetail.id}</h1>
                 <h2>Titolo: {postDetail.title}</h2>
@@ -30,7 +36,7 @@ function Details() {
                         <p>{comment.body}</p>
                     </div>
                 ))}
-            </div>
+            </ContainerDiv>
         )
     }else{
         return(
