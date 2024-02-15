@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import Redirect from "./Redirect";
-import { IPostComments, IPostDetails } from "../interfaces/interfaces";
 import { usePostDetails } from "../hooks/usePostDetails";
 
 function Details() {

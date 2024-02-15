@@ -32,7 +32,7 @@ export const AppProvider = ({ children }: ContextProvider) => {
             setIsLogged(JSON.parse(localStorageIsLogged));
         }
     }, []);
-
+    
     return (
         <AppContext.Provider value={{ isLogged, setIsLogged, handleLoginClick }}>
             {children}
