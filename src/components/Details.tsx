@@ -5,6 +5,7 @@ import { usePostDetails } from "../hooks/usePostDetails";
 import styled from "styled-components";
 
 const ContainerDiv = styled.div({
+    marginTop: '25px',
     marginLeft: '100px',
     marginRight: '100px'
 })
