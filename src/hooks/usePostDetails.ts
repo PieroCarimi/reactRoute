@@ -11,14 +11,14 @@ export function usePostDetails(){
     const [postComments, setComments] = useState<Array<IPostComments>>(utilityGetPostComments(idPost));
 
     const getPostDetail = async (idPost: string) => {
-        const response = await fetch(`http://jsonplaceholder.typicode.com/posts/${idPost}`);
+        const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${idPost}`);
         const data = await response.json();
         setPostDetail(data);
         utilitySetPostDetail(idPost, data);
     }
 
     const getComments = async (idPost: string) => {
-        const response = await fetch(`http://jsonplaceholder.typicode.com/posts/${idPost}/comments`);
+        const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${idPost}/comments`);
         const data = await response.json();
         setComments(data);
         utilitySetPostComments(idPost, data);
