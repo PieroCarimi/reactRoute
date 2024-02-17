@@ -17,7 +17,7 @@ function App() {
   
   return(
   
-    <BrowserRouter basename="/reactRoute">
+    <BrowserRouter basename="/">
       <Routes>
 
         <Route element={<GuestRoute />}>
