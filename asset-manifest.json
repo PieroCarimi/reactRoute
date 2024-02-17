@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/reactRoute/static/css/main.f855e6bc.css",
-    "main.js": "/reactRoute/static/js/main.10444fe3.js",
+    "main.js": "/reactRoute/static/js/main.1a92eff6.js",
     "static/js/592.dd3bc9f2.chunk.js": "/reactRoute/static/js/592.dd3bc9f2.chunk.js",
     "index.html": "/reactRoute/index.html",
     "main.f855e6bc.css.map": "/reactRoute/static/css/main.f855e6bc.css.map",
-    "main.10444fe3.js.map": "/reactRoute/static/js/main.10444fe3.js.map",
+    "main.1a92eff6.js.map": "/reactRoute/static/js/main.1a92eff6.js.map",
     "592.dd3bc9f2.chunk.js.map": "/reactRoute/static/js/592.dd3bc9f2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.10444fe3.js"
+    "static/js/main.1a92eff6.js"
   ]
 }
