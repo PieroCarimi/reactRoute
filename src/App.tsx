@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   BrowserRouter,
+  HashRouter,
   Route,
   Routes,
   } from "react-router-dom";
@@ -17,7 +18,7 @@ function App() {
   
   return(
   
-    <BrowserRouter basename="/">
+    <HashRouter>
       <Routes>
 
         <Route element={<GuestRoute />}>
@@ -34,7 +35,7 @@ function App() {
         <Route path="*" element={<Redirect />} />
         
       </Routes>
-    </BrowserRouter>   
+    </HashRouter>   
 
   )
 }
