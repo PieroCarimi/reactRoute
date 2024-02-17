@@ -18,7 +18,7 @@ function App() {
   
   return(
   
-    <HashRouter>
+    <HashRouter basename="/reactRoute">
       <Routes>
 
         <Route element={<GuestRoute />}>
